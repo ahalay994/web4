@@ -1,0 +1,12 @@
+{
+    "/js/app.js": "/js/app.js",
+    "/css/app.css": "/css/app.css",
+    "/css/global.css": "/css/global.css",
+    "/css/admin.css": "/css/admin.css",
+    "/js/all.js": "/js/all.js",
+    "/js/admin.js": "/js/admin.js",
+    "/js/delete-handler.js": "/js/delete-handler.js",
+    "/css/admin/bootstrap-datetimepicker.min.css": "/css/admin/bootstrap-datetimepicker.min.css",
+    "/js/admin/bootstrap-datetimepicker.min.js": "/js/admin/bootstrap-datetimepicker.min.js",
+    "/js/admin/moment.min.js": "/js/admin/moment.min.js"
+}

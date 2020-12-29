@@ -1,0 +1,21 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+// Components
+@import "components/header";
+@import "components/slider";
+@import "components/card";
+@import "components/footer";
+@import "components/auth";
+@import "components/colorbox";
+@import "components/gallery";
+
+// Pages
+@import "pages/teamItem";
+@import "pages/contacts";

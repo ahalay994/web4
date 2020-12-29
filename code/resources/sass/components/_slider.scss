@@ -1,0 +1,89 @@
+.slick {
+    &-list {
+        min-width: 100%;
+    }
+    &-dotted {
+        &.slick-slider {
+            margin-bottom: 0;
+        }
+    }
+    &-arrow {
+        height: 30px;
+        width: 30px;
+        &:before, &:before {
+            font-size: 30px;
+        }
+    }
+}
+
+.slider {
+    height: 60vh;
+    width: 100%;
+    position: relative;
+
+    img {
+        height: 60vh;
+        width: auto;
+        margin: auto;
+    }
+
+    .bg-image {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        z-index: -1;
+        filter: blur(8px);
+        -webkit-filter: blur(8px);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .slick-dots {
+        bottom: 0;
+        li {
+            button {
+                &:before {
+                    font-size: 16px;
+                    width: 30px;
+                    height: 30px;
+                }
+            }
+        }
+    }
+}
+
+.team-slider {
+    .slick-track {
+        margin-left: 0;
+        display: flex;
+        align-items: stretch;
+    }
+
+    &.slick-initialized {
+        .slick-slide {
+            display: flex;
+            flex-direction: column;
+            height: auto;
+        }
+    }
+
+    .slick-prev {
+        top: -45px;
+        right: 60px;
+        bottom: auto;
+        left: auto;
+    }
+
+    .slick-next {
+        bottom: auto;
+        top: -45px;
+        right: 15px;
+    }
+
+    .slick-prev, .slick-next {
+        &:before {
+            color: #000000;
+        }
+    }
+}

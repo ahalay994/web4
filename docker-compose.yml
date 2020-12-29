@@ -1,0 +1,55 @@
+version: "3.8"
+services:
+  nginx:
+    image: nginx:alpine
+    container_name: web-nginx
+    restart: "no"
+    tty: true
+    ports:
+      - 8100:80
+      - 444:443
+    networks:
+      - backend
+    links:
+      - php
+      - mysql
+    volumes:
+      - ./code/:/var/www/html/
+      - ./nginx/conf.d/:/etc/nginx/conf.d/
+      - ./logs/nginx/nginx-error.log:/var/log/nginx/error.log
+      - ./logs/nginx/nginx-access.log:/var/log/nginx/access.log
+
+  php:
+    container_name: web-php
+    build:
+      args:
+        user: admin
+        uid: 1000
+      context: ./php/
+      dockerfile: Dockerfile
+    restart: "no"
+    networks:
+      - backend
+    volumes:
+      - ./code/:/var/www/html/
+      - ./php/php.ini:/usr/local/etc/php/php.ini
+
+  mysql:
+    container_name: web-db
+    image: mysql:8.0.22
+    restart: "no"
+    networks:
+      - backend
+    environment:
+      MYSQL_DATABASE: web
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_USER: root
+      MYSQL_PASSWORD: root
+    volumes:
+      - .mysql:/var/lib/mysql
+    ports:
+      - 3013:3306
+
+networks:
+  backend:
+    driver: bridge

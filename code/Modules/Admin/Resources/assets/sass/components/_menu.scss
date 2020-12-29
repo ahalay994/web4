@@ -1,0 +1,13 @@
+.sidebar {
+    padding-top: 60px;
+    ul {
+        a {
+            color: #ffffff;
+            font-size: 18px;
+            &.active {
+                background-color: #d1d1d1;
+                color: #000000;
+            }
+        }
+    }
+}
